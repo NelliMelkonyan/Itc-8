@@ -46,10 +46,17 @@
                         <button class="search-button btn dropdown-toggle" type="button" data-toggle="dropdown">
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu">
-                            <li><input name="date" type="date"></li>
-                            <li><input name="time" type="time">
-                                <input name="t" type="time"></li>
+                        <ul class="list dropdown-menu">
+
+                            <li>
+                                <p>Select date : </p>
+                                <input name="date" type="date" class="date">
+                            </li>
+                            <li>
+                                <p>Select time : </p>
+                                <input name="time" type="time" class="time">
+                                <input name="t" type="time" class="time">
+                            </li>
                         </ul>
                     </div>
 
@@ -58,7 +65,7 @@
                         <button class="search-button btn dropdown-toggle" type="button" data-toggle="dropdown">
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="list dropdown-menu">
                             <li><a href="#">Camera1</a>
                             <li><a href="#">Camera2</a>
                             <li><a href="#">Camera3</a>
