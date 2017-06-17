@@ -24,7 +24,6 @@
 
 .input {
     border:solid 1px black;
-    display:block;
 }
 
 .text {
@@ -191,7 +190,7 @@ nav.nav-bar ul {
     -webkit-animation: blink 3s linear infinite;
     animation: blink 2s linear infinite;
     font-weight: bold;
-    color: color: #000000;
+    color: #000000;
 }
 
 @-webkit-keyframes blink {
