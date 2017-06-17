@@ -13,10 +13,6 @@
     display: inline;
 }
 
-.input {
-    display:block;
-}
-
 .text {
     margin-bottom:-2%;
 }
@@ -27,7 +23,7 @@
     box-shadow: 2px 2px 2px 2px rgb(17,67,87);
     width: 25%;
     margin-top: 12%;
-    margin-bottom: 16%;
+    margin-bottom: 12%;
     margin-left:37%;
     min-width:300px;
 }
@@ -149,7 +145,7 @@ nav.nav-bar ul {
     }
 
     .login {
-        margin-left:0%;
+        margin-left:0;
     }
 }
 .logText {
