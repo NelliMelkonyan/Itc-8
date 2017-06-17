@@ -33,13 +33,13 @@
 
 .login {
     background-color: rgba(230, 231, 255, 0.66);
-    opacity: 0.8;
+    opacity: 1;
     /*background-color:rbga(255,255,255,0.5%);*/
     padding:2%;
     box-shadow: 2px 2px 2px 2px rgb(0, 0, 0);
     width: 25%;
-    margin-top: 12%;
-    margin-bottom: 16%;
+    margin-top: 7%;
+    margin-bottom: 9%;
     margin-left:37%;
     min-width:300px;
 }
