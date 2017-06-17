@@ -1,8 +1,9 @@
 .cameras {
     background-color:  #d9d9d9;
-    min-height: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    min-height: 800px;
+    margin-left: 0%;
+    margin-right: 0%;
+
 }
 
 .camera-info {
@@ -14,7 +15,7 @@
 }
 
 .cam-foto {
-    background-image:url("../images/cam.svg");
+    background-image: url("../images/cam.svg");
     margin-left: 11px;
     padding: 8%;
     background-size: contain;
@@ -26,5 +27,30 @@
 
 .info {
     float:left;
-    width: 63%;
+    width: 60%;
+}
+
+.info-field {
+    margin-bottom: 3%;
+    margin-top:3%; 
+}
+
+.icons {
+    width:5%;
+    display: inline-block;
+    margin-top: 2%;
+}
+
+.icons>button {
+    background-color: white;
+}
+
+.icons>button:focus {
+    background-color: white;
+    outline:none;
+}
+
+.icons>button:active {
+    background-color: white;
+    outline: none;
 }
