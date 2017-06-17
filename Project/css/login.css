@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
 .global {
     background-image: url("../images/logImg1.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
->>>>>>> 1c094d12ba3f001d4d3d347e2ffc91985fdb6484
 .btnLog {
     border:solid 1px black;
     display: inline;
