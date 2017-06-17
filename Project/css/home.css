@@ -12,9 +12,8 @@
     background-color: rgba(0, 0, 0, 0.28);
 }
 .item {
-    margin:auto;
-    margin-top:2%;
-    margin-bottom:2%;
+    /*TODO margin property can be optimized like  margin: 2% auto; the same approach can be used for background property*/
+    margin: 2% auto;
     padding: 20%;
     background-image: url("../images/camera.jpg");
     background-repeat: no-repeat;

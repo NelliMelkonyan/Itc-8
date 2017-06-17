@@ -12,6 +12,8 @@
     box-shadow: 1px 1px 5px #888888;
 }
 
+/*TODO typo in wrod foto :)*/
+
 .cam-foto {
     background-image: url("../images/cam.svg");
     margin-left: 11px;
@@ -38,6 +40,8 @@
     display: inline-block;
     margin-top: 2%;
 }
+
+/*TODO background-color: white; can be defined as variable by using scss*/
 
 .icons>button {
     background-color: white;
