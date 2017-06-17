@@ -12,13 +12,21 @@
     background-color: rgba(0, 0, 0, 0.28);
 }
 .item {
-    /*TODO margin property can be optimized like  margin: 2% auto; the same approach can be used for background property*/
-    margin: 2% auto;
+    margin:auto;
+    margin-top:2%;
+    margin-bottom:2%;
     padding: 20%;
-    background-image: url("../images/camera.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    border-radius: 10%;
 }
 
+#item-1 {
+    background: url("../images/camera.jpg") center  no-repeat;
+    background-size: contain;
+}
+#item-2 {
+    background: url("../images/camera1.jpg") center  no-repeat;
+    background-size: contain;
+}
+#item-3 {
+    background: url("../images/camera2.jpg") center  no-repeat;
+    background-size: contain;
+}

@@ -4,8 +4,6 @@ body{
     color:#000000;
 
     width: 100%;
-    /*TODO there is no need to provide height property'*/
-    height: 100%;
     min-width: 400px;
 }
 .global {
