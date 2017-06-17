@@ -2,13 +2,11 @@
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-    background-color: #d9d9d9;
+    background-image: url("../images/programmer.jpg");
 }
-
 
 .search-col {
     padding-bottom: 2%;
-    background-color: #d9d9d9;
 }
 
 .dropdown {
@@ -19,13 +17,15 @@
 }
 
 .search-input {
-
+    background-color: rgba(230, 231, 255, 0.8);
     border-radius: 0;
-    font-size: 150%;
+    font-size: 145%;
     width: 70%;
     float:left;
     margin-top: 4%;
     margin-left: 10%;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
 }
 
 .search-button {
@@ -35,8 +35,13 @@
     color: white;
     margin-top: 4%;
     border-radius: 0;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
+
 .list {
+    background-color: rgba(230, 231, 255, 0.66);
+    position: relative;
     width: 80%;
     list-style: none;
     -webkit-margin-after: 5%;
@@ -57,23 +62,11 @@
     margin: 2%;
 }
 
-.detected-list {
-    background-color: #d9d9d9;
-}
-
-.ficsed-date {
-    font-style: oblique;
-    font-size: 100%;
-}
-
-.ficsed-camera {
-    font-size: 120%;
-    font-family: 'Open Sans Condensed', sans-serif;
-}
-
 .detected-object {
+    font-size: 1.2em;
     margin: 2%;
     box-shadow: 1px 1px 5px #888888;
-    background-color: white;
-    padding: 2%;
+    background-color: rgba(230, 231, 255, 0.7);
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
