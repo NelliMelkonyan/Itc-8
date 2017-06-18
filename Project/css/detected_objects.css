@@ -22,6 +22,7 @@
     padding: 1% 0 2% 0;
     border-radius: 0;
     width: 70%;
+    font-size: 120%;
     float:left;
     margin-top: 4%;
     margin-left: 10%;
@@ -30,6 +31,7 @@
 }
 
 .search-button {
+    font-size: 120%;
     padding: 1% 0 2% 0;
     float: left;
     background-color: grey;
@@ -45,7 +47,7 @@
 .list {
     background-color: rgba(230, 231, 255, 0.66);
     position: relative;
-    width: 80%;
+    width: 79%;
     list-style: none;
     -webkit-margin-after: 5%;
     margin-left: 10%;
