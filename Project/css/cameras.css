@@ -7,7 +7,7 @@
 .camera-info {
     margin-top:2%;
     margin-bottom:1%;
-    background-color: rgba(230, 231, 255, 0.66);;
+    background-color: rgba(230, 231, 255, 0.66);
     font-size: 1.2em;
     box-shadow: 1px 1px 5px #888888;
 }
@@ -27,7 +27,7 @@
 
 .info {
     float:left;
-    width: 60%;
+    width: 47%;
 }
 
 .info-field {
@@ -36,7 +36,7 @@
 }
 
 .icons {
-    width:5%;
+    width:19%;
     display: inline-block;
     margin-top: 2%;
 }
@@ -44,7 +44,7 @@
 /*TODO background-color: white; can be defined as variable by using scss*/
 
 .icons>button {
-    background-color: white;
+    background-color: rgba(230, 231, 255, 0.66);
 }
 
 .icons>button:focus {
