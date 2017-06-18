@@ -85,7 +85,7 @@ nav.nav-bar ul {
 }
 
 /*TODO Do we actually need these media queries ? let's discuss their usage verbally*/
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
 
     .nav-menu {
         color: #ffffff;
