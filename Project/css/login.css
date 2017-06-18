@@ -96,7 +96,9 @@ nav.nav-bar ul {
 }
 
 #btnLogId:hover, #btnLogId:active {
+    color: black;
     background-color: rgb(211, 212, 236);
+    border:solid 1px black
 }
 .label {
     margin-top:5%;
