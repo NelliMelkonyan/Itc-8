@@ -84,45 +84,31 @@ nav.nav-bar ul {
     padding-top: 20px ;
 }
 
-/*TODO Do we actually need these media queries ? let's discuss their usage verbally*/
-@media screen and (max-width: 768px) {
 
-    .nav-menu {
-        color: #ffffff;
-        float: left;
-        display: block;
-        padding: 10px 10px;
-        cursor: pointer;
-        text-decoration: none;
-    }
-    .nav-list {
-        float: left;
-        width: 100%;
-    }
-
-    .nav-list li {
-        width: 100%
-    }
-
-    .nav-list li a {
-        text-align: left;
-    }
-    #nav li a:hover {
-        text-decoration: none;
-        margin-left: 3%;
-    }
-    #nav li a:focus{
-        text-decoration: none;
-    }
-    #nav {
-        display:none;
-        list-style: none;
-    }
-    .nav-menu:hover {
+.nav-menu {
+    color: #ffffff;
+    float: left;
+    display: block;
+    padding: 10px 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+#nav li a:hover {
+    text-decoration: none;
+    margin-left: 3%;
+}
+#nav li a:focus{
+    text-decoration: none;
+}
+#nav {
+    display:none;
+    list-style: none;
+}
+.nav-menu:hover {
         color: #fffff4;
         text-decoration: none;
-    }
 }
+
 
 
 
