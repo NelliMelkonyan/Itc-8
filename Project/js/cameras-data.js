@@ -22,13 +22,41 @@ $(document).ready(function(){
                 <button class="btn glyphicon glyphicon-remove-circle col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1\ col-sm-offset-1" title="Delete"> </button>\
             </div>-->\
         </div>';
-            }
+    }
     document.getElementById("cam-area").innerHTML += text;
 });
 
 
 var searchBy = function() {
-   
+    document.getElementById("notFound").style.display = "none";
+    var cam = document.getElementById("search_area").value;
+    var find = false;
+    for (i = 0; i < data.camName.length; i++) {
+        if (cam === data.camName[i]) {
+            find = true;
+            var text = ' \
+                <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 camera-info">\
+                    <div class="cam-foto">\
+                    </div>\
+                    <div class="info" >\
+                        <p class="info-field" style="margin: 2% 0  0 ;"><b> ' + data.camName[i] + '</b></p>\
+                        <p class="info-field">' + data.location[i] + '</p>\
+                        <p class="info-field">' + data.onOff[i] + '</p>\
+                    </div>\
+                    <!--<div class="icons">\
+                        <button class="btn glyphicon glyphicon-edit col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1 col-sm-offset-1"\ title="Edit">\
+                        </button>\
+                        <button class="btn glyphicon glyphicon-remove-circle col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1\ col-sm-offset-1" title="Delete"> </button>\
+                    </div>-->\
+                </div>';
+                document.getElementById("cam-area").innerHTML = text;
+                break;
+        }
+    }
+    if (!find) {
+        document.getElementById("notFound").style.display = "block";
+    }
+    document.getElementById("search_area").value = "";
 }
 
 
