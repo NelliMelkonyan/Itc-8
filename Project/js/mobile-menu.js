@@ -3,7 +3,7 @@ function resizeIframe(obj) {
 }
 
 $(document).ready(function(){
-    if (getCookie('a@mail.ru')) {
+    if (getCookie('aaab@mail.ru')) {
         document.getElementById('log').innerHTML =
             "<i class='icon glyphicon glyphicon-user'></i>" + "&nbsp;&nbsp;Admin"
             + "<i class='icon glyphicon glyphicon-arrow'></i>";

@@ -25,7 +25,7 @@
                             <label class="label">
                                 <div class="input-group input">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input id="email" title="Invalid email address" type="email" class="form-control" name="email" placeholder="Enter email" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                                    <input id="email" title="Invalid email address" type="email" class="form-control" name="email" placeholder="Enter email" required="required" pattern="^[a-zA-Z]+[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                                 </div>
                             </label>
 
@@ -33,7 +33,7 @@
                             <label class="label">
                                 <div class="input-group input">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                    <input id="password" title="Password must contain at least 6 characters.All characters are allowed" type="password" class="form-control" name="password" placeholder="Enter password" required="required" pattern=".{6,15}">
+                                    <input id="password" title="Password must contain at least 6 characters.All characters are allowed" type="password" class="form-control" name="password" placeholder="Enter password" required="required" pattern="(?=.*[a-z])(?=.*[A-Z]).{6,15}">
                                 </div>
                             </label>
                             <div class="remember-logBtn">
