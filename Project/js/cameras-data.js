@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var text = "";
     var i;
-    for (i = 0; i < 3; i++) {
+    for (i = 0; i < 5; i++) {
     text += ' \
         <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 camera-info">\
             <div class="cam-foto">\

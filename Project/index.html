@@ -3,7 +3,6 @@
 
 <head>
     <title>Home</title>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/mobile-menu.js"></script>
@@ -11,75 +10,46 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home.css">
-<script>
-$(window).load(function() {
-        alert("dd");
-	$('.item').flexslider({
-		animation: "slide",
-		controlsContainer: ".slider-holder",
-		slideshowSpeed: 1000,
-		directionNav: true,
-		controlNav: true,
-		animationDuration: 900
-	});
-});
-</script>
-
 </head>
 <body>
+<!--header-->
+    <div class="container">
+        <header>
+            <div class="topMenu header">
+                <nav class="nav-bar">
+                    <div class="nav-container">
+                        <a id="nav-menu" class="nav-menu hidden-sm hidden-md hidden-lg" >
+                            <i class="icon glyphicon glyphicon-list"></i>&nbsp;&nbsp;Menu
+                        </a>
+                        <ul class="nav-list hidden-xs">
+                            <li id="home" class="active"> <a><img src="images/home.svg" class="logo"></a></li>
+                            <li id="detected"> <a><i class="icon glyphicon glyphicon-user"></i>&nbsp;&nbsp;DETECTED OBJECTS</a></li>
+                            <li id="cameras"> <a><i class="icon glyphicon glyphicon-camera"></i>&nbsp;&nbsp;CAMERAS</a></li>
+                            <li id="login"> <a id="log"><i class="icon glyphicon glyphicon-log-in"></i>&nbsp;&nbsp;Log In</a></li>
+                        </ul>
+                    </div>
+                </nav>
 
-<!--typo in word containar :))-->
-<div class="container">
-    <div class="topMenu">
-        <nav class="nav-bar">
-            <div class="nav-container">
-                <a id="nav-menu" class="nav-menu hidden-sm hidden-md hidden-lg" >
-                    <i class="icon glyphicon glyphicon-list"></i>&nbsp;&nbsp;Menu
-                </a>
-                <ul class="nav-list hidden-xs">
-                    <!--TODO BS home icon can be used-->
-                    <li> <a href="index.html"><img src="images/home.svg" class="logo"></a></li>
-                    <li> <a href="resurces/detected_objects.html"><i class="icon glyphicon glyphicon-user"></i>&nbsp;&nbsp;DETECTED OBJECTS</a></li>
-                    <li> <a href="resurces/cameras.html"><i class="icon glyphicon glyphicon-camera"></i>&nbsp;&nbsp;CAMERAS</a></li>
-                    <li> <a href="resurces/login.html"><i class="icon glyphicon glyphicon-log-in"></i>&nbsp;&nbsp;Log In</a></li>
+                <ul id="nav" class="hidden-sm hidden-md hidden-lg">
+                    <li id="mobile_home"> <a><i class="icon glyphicon glyphicon-home"></i>&nbsp;&nbsp;Home</a></li>
+                    <li id="mobile_detected"> <a><i class="icon glyphicon glyphicon-user"></i>&nbsp;&nbsp;DETECTED OBJECTS</a></li>
+                    <li id="mobile_cameras"> <a><i class="icon glyphicon glyphicon-camera"></i>&nbsp;&nbsp;CAMERAS</a></li>
+                    <li id="mobile_login"> <a><i class="icon glyphicon glyphicon-log-in"></i>&nbsp;&nbsp;Log In</a></li>
                 </ul>
             </div>
-        </nav>
-       
-        <ul id="nav" class="hidden-sm hidden-md hidden-lg">
-            <li> <a href="resurces/detected_objects.html"><i class="icon glyphicon glyphicon-user"></i>&nbsp;&nbsp;DETECTED OBJECTS</a></li>
-            <li> <a href="resurces/cameras.html"><i class="icon glyphicon glyphicon-camera"></i>&nbsp;&nbsp;CAMERAS</a></li>
-            <li> <a href="resurces/login.html"><i class="icon glyphicon glyphicon-log-in"></i>&nbsp;&nbsp;Log In</a></li>
-        </ul>
-  
- 
-    </div>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+        </header>
 
-        <!-- Wrapper for slides -->
-         <div class="carousel-inner slide">
-            <div class="item active" id="item-1">
+
+ <!--content-->
+        <iframe  src="resurces/home.html" class="slider" onload="resizeIframe(this)" id="content"></iframe>
+
+ <!--footer-->
+        <footer>
+            <div class="topMenu footer">
+                <span class="copyright">&copy; 2017 Instigate Training Center</span>
             </div>
-
-            <div class="item" id="item-2">
-            </div>
-
-            <div class="item" id="item-3">
-            </div>
-        </div>
-
+        </footer>
     </div>
-    <div class=" topMenu footer">
-        <span class="copyright">&copy; 2017 Instigate Training Center </span>
-    </div>
-</div>
 
-</body>
+    </body>
 </html>

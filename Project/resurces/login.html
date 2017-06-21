@@ -4,7 +4,7 @@
         <title>Login</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="../js/mobile-menu.js"></script>
+        <script src="../js/login.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
         <link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
@@ -14,30 +14,6 @@
 
     <body>
         <div class="container global">
-            <div class="topMenu">
-                <!--extra div should be removed-->
-                <nav class="nav-bar">
-                    <!--please change ddd id name-->
-                    <div class="nav-container">
-                        <a id="nav-menu" class="nav-menu hidden-sm hidden-md hidden-lg">
-                            <i class="icon glyphicon glyphicon-list"></i>&nbsp;
-                            &nbsp;Menu
-                        </a>
-                        <ul class="nav-list hidden-xs">
-                            <li> <a href="../index.html"><img src="../images/home.svg" class="logo"></a></li>
-                            <li> <a href="../resurces/detected_objects.html"><i class="icon glyphicon glyphicon-user"></i>&nbsp;&nbsp;DETECTED OBJECTS</a></li>
-                            <li> <a href="../resurces/cameras.html"><i class="icon glyphicon glyphicon-camera"></i>&nbsp;&nbsp;CAMERAS</a></li>
-                            <li> <a href="../resurces/login.html"><i class="icon glyphicon glyphicon-log-in"></i>&nbsp;&nbsp;Log In</a></li>
-                        </ul>
-                    </div>
-                </nav>
-                <ul id="nav" class="hidden-sm hidden-md hidden-lg">
-                    <li> <a href="../index.html"><i class="icon glyphicon glyphicon-home"></i>&nbsp;&nbsp;Home</a></li>
-                    <li> <a href="../resurces/detected_objects.html"><i class="icon glyphicon glyphicon-user"></i>&nbsp;&nbsp;DETECTED OBJECTS</a></li>
-                    <li> <a href="../resurces/cameras.html"><i class="icon glyphicon glyphicon-camera"></i>&nbsp;&nbsp;CAMERAS</a></li>
-                </ul>
-
-            </div>
             <div class="container">
                 <div class="row loginGlobal">
                     <div class="login col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2 col-center-block">
@@ -62,15 +38,12 @@
                             </label>
                             <div class="remember-logBtn">
                                 <label><input class="remember" type="checkbox" name="remember"> Remember me</label>
-                                <button type="submit" class="btn btn-default btnLog"id="btnLogId"><strong>LogIn</strong></button>
+                                <button type="submit" class="btn btn-default btnLog" id="btnLogId"><strong>LogIn</strong></button>
                             </div>
                         </form>
 
                     </div>
                 </div>
-            </div>
-            <div class="row topMenu footer">
-                <span class="copyright">&copy; 2017 Instigate Training Center</span>
             </div>
         </div>
     </body>

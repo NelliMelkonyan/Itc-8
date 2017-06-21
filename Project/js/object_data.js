@@ -16,7 +16,7 @@ var text ='\
     </div>' ;
 
 var i = 0;
-for(var i = 0; i < 3; i++) {
+for(var i = 0; i < 5; i++) {
     document.write(text);
 
 }
