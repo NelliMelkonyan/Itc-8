@@ -10,12 +10,13 @@
     <link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/detected_objects.css">
+    <script src="../js/jsonParse.js"></script>
 
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
+    <div class="container" >
+        <div class="row" >
             <div class="col-sm-3 col-xs-12 search-col">
                 <div class="dropdown">
                     <input class="search-input" type="text" placeholder="Search by date">
@@ -23,15 +24,10 @@
                         <span class="caret"></span>
                     </button>
                     <ul class="list dropdown-menu">
-
                         <li>
                             <p>Select date : </p>
-                            <input name="date" type="date" class="date">
-                        </li>
-                        <li>
-                            <p>Select time : </p>
-                            <input name="time" type="time" class="time">
-                            <input name="t" type="time" class="time">
+                            <input name="" type="" class="time">
+                            <input name="" type="" class="time">
                         </li>
                     </ul>
                 </div>
@@ -41,17 +37,13 @@
                     <button class="search-button dropdown-toggle" type="button" data-toggle="dropdown">
                         <span class="caret"></span>
                     </button>
-                    <ul class="list dropdown-menu">
-                        <li><a href="#">Camera1</a>
-                        <li><a href="#">Camera2</a>
-                        <li><a href="#">Camera3</a>
-                        <li><a href="#">Camera4</a>
-                        <li><a href="#">Camera5</a>
+                    <ul class="list dropdown-menu" id="searchByCamera">
+
                     </ul>
                 </div>
             </div>
-            <div class="detected-list col-md-9 col-sm-9 col-xs-12">
-                <script src="../js/object_data.js"></script>
+            <div id="detected-objects" class="detected-list col-md-9 col-sm-9 col-xs-12">
+
             </div>
         </div>
     </div>
