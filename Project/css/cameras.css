@@ -9,6 +9,7 @@
     -o-background-size: cover;
     background-size: cover;
     overflow:hidden;
+    min-height: 500px;
 }
 
 .notFound {
@@ -82,8 +83,16 @@
     margin-top: 20px;
 }
 
-#search_but {
+#search_but, #dropBut {
     background-color: rgba(230, 231, 255, 0.8);
+}
+
+#search_but, #dropBut:active {
+    outline: none;
+}
+
+#search_but:focus {
+    outline: none;
 }
 
 #search_area {
