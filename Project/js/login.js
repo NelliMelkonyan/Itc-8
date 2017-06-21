@@ -4,6 +4,7 @@ $(document).ready(function(){
         var pass = document.getElementById('password').value;
         window.parent.document.getElementById('log').innerHTML = "<i class='icon glyphicon glyphicon-user'></i>" + "&nbsp;&nbsp;Admin" + "<i class='icon glyphicon glyphicon-arrow'></i>";
         window.parent.document.getElementById('content').src = "resurces/home.html";
+
         location.reload(false);
         var exhours = 5;
         var d = new Date();
