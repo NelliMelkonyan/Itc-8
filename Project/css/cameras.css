@@ -2,7 +2,13 @@
     background-image: url("../images/camera-lens.jpg");
     margin-left: 0;
     margin-right: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
+    overflow:hidden;
 }
 
 .camera-info {
@@ -28,7 +34,7 @@
 }
 
 .cam-foto:hover {
-    opacity:0.8;
+    opacity:0.6;
 }
 
 .info {
@@ -63,3 +69,17 @@
     outline: none;
 }
 
+.search {
+    width: 50%;
+    margin:auto;
+    margin-top: 20px;
+}
+
+#search_but {
+    background-color: rgba(230, 231, 255, 0.8);
+}
+
+#search_area {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+}
