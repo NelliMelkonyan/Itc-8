@@ -16,6 +16,9 @@
     margin-top:2%;
     margin-bottom:2%;
     padding: 20%;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
 }
 
 #item-1 {
@@ -30,3 +33,8 @@
     background: url("../images/camera2.jpg") center  no-repeat;
     background-size: contain;
 }
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+

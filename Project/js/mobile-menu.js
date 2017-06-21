@@ -2,16 +2,12 @@ function resizeIframe(obj) {
     obj.style.height = (screen.height - 150)+ 'px';
 }
 
-
-function display() {
-    document.getElementById('log').textContent = 'Log In';
-}
 $(document).ready(function(){
-
-    var user = getCookie('a@mail.ru');
-    if (user){
-        document.getElementById('log').textContent = 'Log Out';
-        document.getElementById("log").addEventListener("click", display);
+    if (getCookie('a@mail.ru')) {
+        document.getElementById('log').innerHTML =
+            "<i class='icon glyphicon glyphicon-user'></i>" + "&nbsp;&nbsp;Admin"
+            + "<i class='icon glyphicon glyphicon-arrow'></i>";
+        document.getElementById('login').id = "logout";
     }
     $('#nav-menu').click(function(){
         $('#nav').toggle(500);
