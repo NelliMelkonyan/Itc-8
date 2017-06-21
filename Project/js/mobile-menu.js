@@ -7,7 +7,6 @@ $(document).ready(function(){
         document.getElementById('log').innerHTML =
             "<i class='icon glyphicon glyphicon-user'></i>" + "&nbsp;&nbsp;Admin"
             + "<i class='icon glyphicon glyphicon-arrow'></i>";
-        document.getElementById('login').id = "logout";
     }
     $('#nav-menu').click(function(){
         $('#nav').toggle(500);

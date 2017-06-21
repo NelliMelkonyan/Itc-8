@@ -95,7 +95,6 @@ nav.nav-bar ul {
 .nav-list li:hover {
     -webkit-filter: brightness(1.3);
     font-size: large;
-    transform:skewY(20deg);
 }
 .nav-list li a:focus {
     -webkit-filter: brightness(1.3);

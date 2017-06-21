@@ -16,9 +16,6 @@
     margin-top:2%;
     margin-bottom:2%;
     padding: 20%;
-    -webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;
 }
 
 #item-1 {
@@ -28,13 +25,34 @@
 #item-2 {
     background: url("../images/camera1.jpg") center  no-repeat;
     background-size: contain;
+ /*   -webkit-animation-name: example;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;*/
 }
 #item-3 {
     background: url("../images/camera2.jpg") center  no-repeat;
     background-size: contain;
 }
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+/*@-webkit-keyframes example {
+    0%   {transform:skewY(50deg);}
+    20%  {transform:skewX(50deg);}
+    40% {transform:skewY(-50deg);}
+    60% {transform:skewX(-50deg);}
+    80% {transform:skewY(50deg);}
+    100% {transform:skewX(50deg);}
+}
+
+/* Standard syntax
+@keyframes example {
+    0%   {transform:skewY(50deg);}
+    20%  {transform:skewX(50deg);}
+    40% {transform:skewY(-50deg);}
+    60% {transform:skewX(-50deg);}
+    80% {transform:skewY(50deg);}
+    100% {transform:skewX(50deg);}
+} */
 
 
