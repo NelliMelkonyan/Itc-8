@@ -3,12 +3,13 @@ function resizeIframe(obj) {
 }
 
 $(document).ready(function(){
-    if (getCookie('aaab@mail.ru')) {
+    if (getCookie('a7@mail.ru')) {
         document.getElementById('log').innerHTML =
             "<i class='icon glyphicon glyphicon-user'></i>" + "&nbsp;&nbsp;Admin"
             + "<i class='icon glyphicon glyphicon-arrow'></i>";
         window.parent.document.getElementById('login').id = "logout";
     }
+
     $('#nav-menu').click(function(){
         $('#nav').toggle(500);
     });
@@ -25,6 +26,7 @@ $(document).ready(function(){
         ChangeContent('login')
     });
     $('#mobile_home').click(function(){
+
         ChangeContent('home')
     });
     $('#mobile_cameras').click(function(){
@@ -38,7 +40,17 @@ $(document).ready(function(){
     });
 });
 
+/*
+ document.getElementById("home").addEventListener("click", ChangeContent('home'));
+ document.getElementById("cameras").addEventListener("click", ChangeContent('cameras'));
+ document.getElementById("detected").addEventListener("click", ChangeContent('detected'));
+ document.getElementById("login").addEventListener("click", ChangeContent('login'));
+ document.getElementById("mobile_home").addEventListener("click", ChangeContent('home'));
+ document.getElementById("mobile_cameras").addEventListener("click", ChangeContent('cameras'));
+ document.getElementById("mobile_detected").addEventListener("click", ChangeContent('detected'));
+ document.getElementById("mobile_login").addEventListener("click", ChangeContent('login'));
 
+  */
 
 function ChangeContent(pageName) {
     switch (pageName) {
