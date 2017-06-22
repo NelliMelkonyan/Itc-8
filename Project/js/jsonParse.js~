@@ -49,9 +49,10 @@ $(document).ready(function() {
 	var myObj = JSON.parse(jsonText) 
    	//jsonParse("../json/detectedObject.json",createItem) ;
 	createItem(myObj);
+	alert(myObj);
 });
 
-/*var createSearchByCameraMenu = function () {
+var createSearchByCameraMenu = function () {
     var a = document.getElementById("searchByCamera");
 
     for (var i = 0; i < cameraName.length; ++i) {
@@ -68,7 +69,7 @@ $(document).ready(function() {
         var ul = document.getElementById("searchByCamera");
         ul.appendChild(li);
     }
-}*/
+}
 
 var createItem = function(myObj) {
     var text = "";
