@@ -33,13 +33,13 @@
                 </div>
 
                 <div class="dropdown">
-                    <input class="search-input" type="text" placeholder="Search by camera">
-                    <button class="search-button dropdown-toggle" type="button" data-toggle="dropdown" onclick="createSearchByCameraMenu()">
-                        <span class="caret"></span>
+                    <input class="search-input" type="text" placeholder="Search by camera"  id="searchByCamera">
+                    <button class="search-button dropdown-toggle" type="button" data-toggle="dropdown" onclick="searchByCameraName()">
+                        <span class="glyphicon glyphicon-search"></span>
                     </button>
-                    <ul class="list dropdown-menu" id="searchByCamera">
+                    <!--<ul class="list dropdown-menu">
 
-                    </ul>
+                    </ul>-->
                 </div>
             </div>
             <div id="detected-objects" class="detected-list col-md-9 col-sm-9 col-xs-12">

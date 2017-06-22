@@ -31,7 +31,7 @@ var jsonText = '  { "camera": [\
   ]\
 }'
 
-var cameraName = [];
+//var cameraName = [];
 
 /*function jsonParse(file, callback) {
         var xmlhttp = new XMLHttpRequest();
@@ -70,16 +70,17 @@ $(document).ready(function() {
     }
 }*/
 
-var createItem = function(myObj) {
+var createItem = function(myObj, cameraName) {
     var text = "";
-    for (var i = 0; i < myObj.camera.length; ++i) {
+    /*for (var i = 0; i < myObj.camera.length; ++i) {
         cameraName[i] = myObj.camera[i].cameraName;
-    }
+    }*/
 
     for (var i = 0; i < myObj.camera.length; ++i) {
         //createSearchByCameraMenu(myObj.camera[i].cameraName);
-        for (var j = 0; j < myObj.camera[i].images.length; ++j) {
-            text += '\
+        if(myObj.camera[i].cameraName == cameraName || !cameraName) {
+            for (var j = 0; j < myObj.camera[i].images.length; ++j) {
+                text += '\
                     <div class="detected-object row">\
                         <img class="col-md-3 col-xs-3 col-sm-3" src="' + myObj.camera[i].images[j].imageName + '">\
                         <div class="col-xs-9 col-sm-9 col-md-9 ficsed-data">\
@@ -92,10 +93,14 @@ var createItem = function(myObj) {
                             <button type="button" class="btn glyphicon glyphicon-paperclip col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1 col-sm-offset-1"> </button>\
                         </div>-->\
                     </div>';
+            }
         }
     }
     document.getElementById("detected-objects").innerHTML = text;
 }
 
-
-
+var searchByCameraName = function() {
+    var text = document.getElementById("searchByCamera").value;
+    var myObj = JSON.parse(jsonText)
+    createItem(myObj, text);
+}
