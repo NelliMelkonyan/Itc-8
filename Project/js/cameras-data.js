@@ -8,7 +8,7 @@ $(document).ready(function(){
     data = JSON.parse(data);
     for (i = 0; i < data.camName.length; i++) {
     text += ' \
-        <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 camera-info">\
+        <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 camera-info" id = "dataArea_' + i + '">\
             <div class="cam-foto">\
             </div>\
             <div class="info" >\
@@ -52,6 +52,10 @@ var cancelBut = function() {
 }
 
 
+var del = function (i) {
+    document.getElementById("dataArea_" + i).style.display = "none";
+}
+
 
 var search = function() {
     document.getElementById("notFound").style.display = "none";
@@ -62,7 +66,7 @@ var search = function() {
                 if (cam === data.camName[i]) {
                     find = true;
                     var text = ' \
-                        <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 camera-info">\
+                        <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 camera-info" id = "dataArea_' + i + '">\
                             <div class="cam-foto">\
                             </div>\
                             <div class="info" >\
@@ -88,7 +92,7 @@ var search = function() {
                     document.getElementById("cam-area").innerHTML = ""
                     find = true;
                     var text = ' \
-                        <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 camera-info">\
+                        <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 camera-info" id = "dataArea_' + i + '">\
                             <div class="cam-foto">\
                             </div>\
                             <div class="info" >\
