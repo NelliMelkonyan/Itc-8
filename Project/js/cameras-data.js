@@ -16,15 +16,41 @@ $(document).ready(function(){
                 <p class="info-field">' + data.location[i] + '</p>\
                 <p class="info-field">' + data.onOff[i] + '</p>\
             </div>\
-            <!--<div class="icons">\
-                <button class="btn glyphicon glyphicon-edit col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1 col-sm-offset-1"\ title="Edit">\
+            <div class="icons">\
+                <button class="btn glyphicon glyphicon-edit col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1 col-sm-offset-1"\
+                 title="Edit" id = "edit" onclick = "edit(' + i + ')">\
                 </button>\
-                <button class="btn glyphicon glyphicon-remove-circle col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1\ col-sm-offset-1" title="Delete"> </button>\
-            </div>-->\
+                <button class="btn glyphicon glyphicon-remove-circle col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1\
+                 col-sm-offset-1" title="Delete" id = "del" onclick = "del(' + i + ')"> </button>\
+            </div>\
         </div>';
     }
     document.getElementById("cam-area").innerHTML += text;
+    text = '<div id="editSettings">Edit camera settings </div>\
+            <hr>\
+            <div class="nameLoc ">Name</div>\
+            <input type="text" placeholder="Enter name">\
+            <div class="nameLoc">Location</div>\
+            <input type="text" placeholder="Enter location">\
+            <button class="btn btn-default btnLog col-xs-4 col-sm-3 col-md-2" id="doneBut" onclick="doneBut()"><strong>Done</strong></button>\
+            <button class="btn btn-default btnLog col-xs-4 col-sm-3 col-md-2" id="cancelBut" onclick="cancelBut()"><strong>Cancel</strong></button>';
+    document.getElementById("editArea").innerHTML = text;
 });
+
+var edit = function(i) {
+    document.getElementById("delEdit").style.display = "inline-block";
+    document.getElementById("cont").style.maxHeight = "100vh";
+    document.getElementById("search").style.display = "none";
+    document.getElementById("editArea").style.display = "inline-block";
+}
+
+var cancelBut = function() {
+    document.getElementById("delEdit").style.display = "none";
+    document.getElementById("editArea").style.display = "none";
+    document.getElementById("search").style.display = "block";
+    document.getElementById("cont").style.maxHeight = "none";
+}
+
 
 
 var search = function() {
@@ -44,11 +70,13 @@ var search = function() {
                                 <p class="info-field">' + data.location[i] + '</p>\
                                 <p class="info-field">' + data.onOff[i] + '</p>\
                             </div>\
-                            <!--<div class="icons">\
-                                <button class="btn glyphicon glyphicon-edit col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1 col-sm-offset-1"\ title="Edit">\
+                            <div class="icons">\
+                                <button class="btn glyphicon glyphicon-edit col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1 col-sm-offset-1"\
+                                 title="Edit" id = "edit" onclick = "edit(' + i + ')">\
                                 </button>\
-                                <button class="btn glyphicon glyphicon-remove-circle col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1\ col-sm-offset-1" title="Delete"> </button>\
-                            </div>-->\
+                                <button class="btn glyphicon glyphicon-remove-circle col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1\
+                                 col-sm-offset-1" title="Delete" id = "del" onclick = "del(' + i + ')"> </button>\
+                            </div>\
                         </div>';
                         document.getElementById("cam-area").innerHTML = text;
                         break;
@@ -69,9 +97,11 @@ var search = function() {
                                 <p class="info-field">' + data.onOff[i] + '</p>\
                             </div>\
                             <!--<div class="icons">\
-                                <button class="btn glyphicon glyphicon-edit col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1 col-sm-offset-1"\ title="Edit">\
+                                <button class="btn glyphicon glyphicon-edit col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1 col-sm-offset-1"\
+                                 title="Edit" id = "edit" onclick = "edit(' + i + ')">\
                                 </button>\
-                                <button class="btn glyphicon glyphicon-remove-circle col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1\ col-sm-offset-1" title="Delete"> </button>\
+                                <button class="btn glyphicon glyphicon-remove-circle col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1\
+                                 col-sm-offset-1" title="Delete" id = "del" onclick = "del(' + i + ')"> </button>\
                             </div>-->\
                         </div>';
                         document.getElementById("cam-area").innerHTML += text;
@@ -100,6 +130,8 @@ $(document).ready(function(e){
         $('.input-group #search_param').val(param);
     });
 });
+
+
 
 var choose = function(check) {
     searchBy = check;
