@@ -7,11 +7,11 @@ var jsonText = '  { "camera": [\
       "images": [\
         {\
           "imageName": "../images/ficsed.JPG",\
-          "imageDate": "09 Sep 2005 13:51:39"\
+          "imageDate": "01/15/2015"\
         },\
         {\
           "imageName": "../images/ficsed.JPG",\
-          "imageDate": "09 Sep 2005 13:51:39"\
+          "imageDate": "01/15/2016"\
         }\
       ]\
     },\
@@ -20,11 +20,11 @@ var jsonText = '  { "camera": [\
       "images": [\
         {\
           "imageName": "../images/ficsed.JPG",\
-          "imageDate": "09 Sep 2005 13:51:39"\
+          "imageDate": "01/15/2017"\
         },\
         {\
           "imageName": "../images/ficsed.JPG",\
-          "imageDate": "09 Sep 2005 13:51:39"\
+          "imageDate": "01/15/2017"\
         }\
       ]\
     }\
@@ -70,37 +70,66 @@ $(document).ready(function() {
     }
 }*/
 
-var createItem = function(myObj, cameraName) {
+var createItem = function(myObj, cameraName, fromDate ,toDate) {
     var text = "";
-    /*for (var i = 0; i < myObj.camera.length; ++i) {
-        cameraName[i] = myObj.camera[i].cameraName;
-    }*/
 
     for (var i = 0; i < myObj.camera.length; ++i) {
         //createSearchByCameraMenu(myObj.camera[i].cameraName);
         if(myObj.camera[i].cameraName == cameraName || !cameraName) {
             for (var j = 0; j < myObj.camera[i].images.length; ++j) {
-                text += '\
+                if (!fromDate || isContainInterval(myObj.camera[i].images[j].imageDate, fromDate, toDate)) {
+                    text += '\
                     <div class="detected-object row">\
                         <img class="col-md-3 col-xs-3 col-sm-3" src="' + myObj.camera[i].images[j].imageName + '">\
                         <div class="col-xs-9 col-sm-9 col-md-9 ficsed-data">\
                                         <p><b>' + myObj.camera[i].cameraName + '</b></p>\
                             <p>' + myObj.camera[i].images[j].imageDate + '</b></p>\
                         </div>\
-                        <!--<div class="col-md-3 col-xs-3 col-sm-3">\
-                            <button class="btn glyphicon glyphicon-edit col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1 col-sm-offset-1"> </button>\
-                            <button class="btn glyphicon glyphicon-remove-circle col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1 col-sm-offset-1"> </button>\
-                            <button type="button" class="btn glyphicon glyphicon-paperclip col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1 col-sm-offset-1"> </button>\
-                        </div>-->\
                     </div>';
+                }
             }
         }
     }
     document.getElementById("detected-objects").innerHTML = text;
 }
 
+function isContainInterval(date, fromDate, toDate) {
+    var dt = date.split('/');
+    for (var i = 0; i < 3; ++i) {
+        if (dt[i] < fromDate[i] || (toDate && dt[i] > toDate[i]) || (!toDate && dt[i] != fromDate[i])){
+            return false;
+        }
+    }
+    return true;
+}
+
 var searchByCameraName = function() {
     var text = document.getElementById("searchByCamera").value;
-    var myObj = JSON.parse(jsonText)
-    createItem(myObj, text);
+    var data = JSON.parse(jsonText)
+    createItem(data, text);
+}
+
+function searchByInterval () {
+    var regExpr = /^\d{1,2}\/\d{1,2}\/\d{4}$/;
+    var data;
+    var date = document.getElementById('date');
+    var dateList = date.value.split('-');
+
+    var fromDate = dateList[0] ? dateList[0] : date.value;
+    var toDate = dateList[1] ? dateList[1] : date.value;
+    if (fromDate && fromDate.match(regExpr)) {
+        data = JSON.parse(jsonText);
+        if(toDate && toDate.match(regExpr)){
+            createItem(data, null, fromDate.split('/'), toDate.split('/'));
+        } else {
+            createItem(data,null, fromDate.split('/'), null);
+        }
+    } else {
+        date.placeholder = "incorrect date";
+    }
+}
+
+function a(i) {
+    alert(i);
+
 }
