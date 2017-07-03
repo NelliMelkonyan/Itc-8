@@ -1,8 +1,9 @@
-<div class="container" >
+
+<div class="container" ng-app="detectedObjectsModule" ng-controller="detectedObjectsController">
     <div class="row" >
         <div class="col-sm-3 col-xs-12 search-col">
             <div class="dropdown">
-                <input class="search-input" type="text" placeholder="Search by date" id="date" onchange="searchByInterval()">
+                <input ng-model="searchByDate" class="search-input" type="text" placeholder="Search by date" id="date" onchange="searchByInterval()">
                 <button class="search-button dropdown-toggle" type="button" data-toggle="dropdown" onclick="searchByInterval()">
                     <span class="glyphicon glyphicon-search"></span>
                 </button>
@@ -16,7 +17,7 @@
             </div>
 
             <div class="dropdown">
-                <input class="search-input" type="text" placeholder="Search by camera"  id="searchByCamera" onchange="searchByCameraName()">
+                <input ng-model="searchByCamera" class="search-input" type="text" placeholder="Search by camera"  id="searchByCamera" onchange="searchByCameraName()">
                 <button class="search-button dropdown-toggle" type="button" data-toggle="dropdown" onclick="searchByCameraName()">
                     <span class="glyphicon glyphicon-search"></span>
                 </button>
@@ -25,8 +26,15 @@
                     </ul>-->
             </div>
         </div>
-        <div id="detected-objects" class="detected-list col-md-9 col-sm-9 col-xs-12">
 
+        <div  class="detected-list col-md-9 col-sm-9 col-xs-12" ng-repeat="camera in ocw.cameras | filter searchByCamera">
+            <div  class="detected-object row" ng-repeat="image in camera.images | filter searchByDate">
+                <img class="col-md-3 col-xs-3 col-sm-3" src="{{image.imageName}}">
+                <div class="col-xs-9 col-sm-9 col-md-9 ficsed-data">
+                    <p><b>{{camera.cameraName}}</b></p>
+                    <p>{{image.imageDate}}</b></p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
