@@ -1,7 +1,6 @@
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
-<div class="container" >
-    <div class="row" ng-app="detectedObjectsModule" ng-controller="detectedObjectsController">
+<div class="container" ng-app="detectedObjectsModule" ng-controller="detectedObjectsController">
+    <div class="row" >
         <div class="col-sm-3 col-xs-12 search-col">
             <div class="dropdown">
                 <input ng-model="searchByDate" class="search-input" type="text" placeholder="Search by date" id="date" onchange="searchByInterval()">
@@ -27,9 +26,9 @@
                     </ul>-->
             </div>
         </div>
-        <div></div>
-        <div  ng-repeat="camera in ocw.cameras | filter searchByCamera" id="detected-objects" class="detected-list col-md-9 col-sm-9 col-xs-12">
-            <div ng-repeat="image in camera.images | filter searchByDate" class="detected-object row">
+
+        <div  class="detected-list col-md-9 col-sm-9 col-xs-12" ng-repeat="camera in ocw.cameras | filter searchByCamera">
+            <div  class="detected-object row" ng-repeat="image in camera.images | filter searchByDate">
                 <img class="col-md-3 col-xs-3 col-sm-3" src="{{image.imageName}}">
                 <div class="col-xs-9 col-sm-9 col-md-9 ficsed-data">
                     <p><b>{{camera.cameraName}}</b></p>

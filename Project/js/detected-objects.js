@@ -1,6 +1,6 @@
-var detected = angular.module("detectedObjectsModule", []);
+var detect= angular.module("detectedObjectsModule", []);
 
-detected.controller("detectedObjectsController", function($scope) {
+detect.controller("detectedObjectsController", function($scope) {
     $scope.ocw = {
         "cameras": [
             { "cameraName": "Camera 1",
