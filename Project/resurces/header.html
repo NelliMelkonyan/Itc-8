@@ -1,34 +1,24 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="../css/style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<header>
+    <div class="topMenu header">
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <a id="nav-menu" class="nav-menu hidden-sm hidden-md hidden-lg" >
+                    <i class="icon glyphicon glyphicon-list"></i>&nbsp;&nbsp;Menu
+                </a>
+                <ul class="nav-list hidden-xs">
+                    <li id="home" class="active"> <a href="#/!"><img src="images/home.svg" class="logo"></a></li>
+                    <li id="detected"> <a href="#!objects"><i class="icon glyphicon glyphicon-user"></i>&nbsp;&nbsp;DETECTED OBJECTS</a></li>
+                    <li id="cameras"> <a href="#!cameras"><i class="icon glyphicon glyphicon-camera"></i>&nbsp;&nbsp;CAMERAS</a></li>
+                    <li id="login"> <a href="#!login" id="log"><i class="icon glyphicon glyphicon-log-in"></i>&nbsp;&nbsp;Log In</a></li>
+                </ul>
+            </div>
+        </nav>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-        <link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="topMenu">
-            <nav class="nav-bar">
-                <div class="nav-container">
-                    <a id="nav-menu" class="nav-menu hidden-sm hidden-md hidden-lg" >
-                        <i class="icon glyphicon glyphicon-list"></i>&nbsp;&nbsp;Menu
-                    </a>
-                    <ul class="nav-list hidden-xs">
-                        <li> <a><img src="../images/home.svg" class="logo"></a></li>
-                        <li> <a><i class="icon glyphicon glyphicon-user"></i>&nbsp;&nbsp;DETECTED OBJECTS</a></li>
-                        <li> <a><i class="icon glyphicon glyphicon-camera"></i>&nbsp;&nbsp;CAMERAS</a></li>
-                        <li> <a><i class="icon glyphicon glyphicon-log-in"></i>&nbsp;&nbsp;Log In</a></li>
-                    </ul>
-                </div>
-            </nav>
-
-            <ul id="nav" class="hidden-sm hidden-md hidden-lg">
-                <li> <a href="resurces/detected_objects.html"><i class="icon glyphicon glyphicon-user"></i>&nbsp;&nbsp;DETECTED OBJECTS</a></li>
-                <li> <a href="resurces/cameras.html"><i class="icon glyphicon glyphicon-camera"></i>&nbsp;&nbsp;CAMERAS</a></li>
-                <li> <a href="resurces/login.html"><i class="icon glyphicon glyphicon-log-in"></i>&nbsp;&nbsp;Log In</a></li>
-            </ul>
-        </div>
-    </body>
-</html>
+        <ul id="nav" class="hidden-sm hidden-md hidden-lg">
+            <li id="mobile_home"> <a><i class="icon glyphicon glyphicon-home"></i>&nbsp;&nbsp;Home</a></li>
+            <li id="mobile_detected"> <a><i class="icon glyphicon glyphicon-user"></i>&nbsp;&nbsp;DETECTED OBJECTS</a></li>
+            <li id="mobile_cameras"> <a><i class="icon glyphicon glyphicon-camera"></i>&nbsp;&nbsp;CAMERAS</a></li>
+            <li id="mobile_login"> <a><i class="icon glyphicon glyphicon-log-in"></i>&nbsp;&nbsp;Log In</a></li>
+        </ul>
+    </div>
+</header>

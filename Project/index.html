@@ -1,56 +1,36 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Home</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <head>
+        <title>Home</title>
 
-    <script src="js/mobile-menu.js" defer></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-    <link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<!--header-->
-    <div class="container">
-        <header>
-            <div class="topMenu header">
-                <nav class="nav-bar">
-                    <div class="nav-container">
-                        <a id="nav-menu" class="nav-menu hidden-sm hidden-md hidden-lg" >
-                            <i class="icon glyphicon glyphicon-list"></i>&nbsp;&nbsp;Menu
-                        </a>
-                        <ul class="nav-list hidden-xs">
-                            <li id="home" class="active"> <a><img src="images/home.svg" class="logo"></a></li>
-                            <li id="detected"> <a ><i class="icon glyphicon glyphicon-user"></i>&nbsp;&nbsp;DETECTED OBJECTS</a></li>
-                            <li id="cameras"> <a><i class="icon glyphicon glyphicon-camera"></i>&nbsp;&nbsp;CAMERAS</a></li>
-                            <li id="login"> <a id="log"><i class="icon glyphicon glyphicon-log-in"></i>&nbsp;&nbsp;Log In</a></li>
-                        </ul>
-                    </div>
-                </nav>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
 
-                <ul id="nav" class="hidden-sm hidden-md hidden-lg">
-                    <li id="mobile_home"> <a><i class="icon glyphicon glyphicon-home"></i>&nbsp;&nbsp;Home</a></li>
-                    <li id="mobile_detected"> <a><i class="icon glyphicon glyphicon-user"></i>&nbsp;&nbsp;DETECTED OBJECTS</a></li>
-                    <li id="mobile_cameras"> <a><i class="icon glyphicon glyphicon-camera"></i>&nbsp;&nbsp;CAMERAS</a></li>
-                    <li id="mobile_login"> <a><i class="icon glyphicon glyphicon-log-in"></i>&nbsp;&nbsp;Log In</a></li>
-                </ul>
-            </div>
-        </header>
+        <script src="js/app.js" defer></script>
+        <script src="js/mobile-menu.js" defer></script>
+        <script src="js/cameras-data.js" defer></script>
+        <script src="js/object_data.js" defer></script>
+        <script src="js/login.js" defer></script>
+        <script src="js/j" defer></script>
 
 
- <!--content-->
-        <iframe  src="resurces/home.html" class="slider" onload="resizeIframe(this)" id="content"></iframe>
-
- <!--footer-->
-        <footer>
-            <div class="topMenu footer">
-                <span class="copyright">&copy; 2017 Instigate Training Center</span>
-            </div>
-        </footer>
-    </div>
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/cameras.css">
+        <link rel="stylesheet" href="css/detected_objects.css">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/login.css">
+    </head>
+    <body ng-app="my-app">
+        <div class="container">
+            <div ng-include="'resurces/header.html'"></div>
+            <div ng-view></div>
+            <div ng-include="'resurces/footer.html'"></div>
+        </div>
     </body>
 </html>

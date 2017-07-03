@@ -1,28 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Detected objects</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="../js/mobile-menu.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-    <link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/detected_objects.css">
-    <script src="../js/jsonParse.js"></script>
-
-</head>
-
-<body>
-    <div class="container" >
-        <div class="row" >
-            <div class="col-sm-3 col-xs-12 search-col">
-                <div class="dropdown">
-                    <input class="search-input" type="text" placeholder="Search by date" id="date" onchange="searchByInterval()">
-                    <button class="search-button dropdown-toggle" type="button" data-toggle="dropdown" onclick="searchByInterval()">
-                        <span class="glyphicon glyphicon-search"></span>
-                    </button>
+<div class="container" >
+    <div class="row" >
+        <div class="col-sm-3 col-xs-12 search-col">
+            <div class="dropdown">
+                <input class="search-input" type="text" placeholder="Search by date" id="date" onchange="searchByInterval()">
+                <button class="search-button dropdown-toggle" type="button" data-toggle="dropdown" onclick="searchByInterval()">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
                    <!--<ul class="list dropdown-menu">
                         <li>
                             <p>Select date : </p>
@@ -30,22 +13,20 @@
                             <input name="" type="" class="time" id="toDate">
                         </li>
                     </ul>-->
-                </div>
+            </div>
 
-                <div class="dropdown">
-                    <input class="search-input" type="text" placeholder="Search by camera"  id="searchByCamera" onchange="searchByCameraName()">
-                    <button class="search-button dropdown-toggle" type="button" data-toggle="dropdown" onclick="searchByCameraName()">
-                        <span class="glyphicon glyphicon-search"></span>
-                    </button>
+            <div class="dropdown">
+                <input class="search-input" type="text" placeholder="Search by camera"  id="searchByCamera" onchange="searchByCameraName()">
+                <button class="search-button dropdown-toggle" type="button" data-toggle="dropdown" onclick="searchByCameraName()">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
                     <!--<ul class="list dropdown-menu">
 
                     </ul>-->
-                </div>
-            </div>
-            <div id="detected-objects" class="detected-list col-md-9 col-sm-9 col-xs-12">
-
             </div>
         </div>
+        <div id="detected-objects" class="detected-list col-md-9 col-sm-9 col-xs-12">
+
+        </div>
     </div>
-</body>
-</html>
+</div>

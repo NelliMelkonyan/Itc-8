@@ -1,47 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Cameras</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="../js/mobile-menu.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-    <link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/cameras.css">
-    <script src="../js/cameras-data.js"></script>
-</head>
-<body>
-    <div class="container cont" id = "cont">
-        
-        <div class="row " id="search">    
-                <div class="col-sm-6  col-sm-offset-3 col-xs-10 col-xs-offset-1">
-                    <div class="input-group">
-                        <div class="input-group-btn search-panel">
-                            <button type="button" class="btn btn-default dropdown-toggle" id="dropBut" data-toggle="dropdown">
-                                <span id="search_concept">Search by</span> <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                              <li><a href="#contains" onclick="choose('name')">Camera name</a></li>
-                              <li><a href="#its_equal" onclick="choose('loc')">Location</a></li>
-                            </ul>
-                        </div>
-                        <input type="hidden" name="search_param" value="all" id="search_param">         
-                        <input type="text" class="form-control" name="x" placeholder="Search ..." id="search_area">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" id="search_but" type="button" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
-                        </span>
-                    </div>
+<div class="container cont" id = "cont">
+    <div class="row " id="search">
+        <div class="col-sm-6  col-sm-offset-3 col-xs-10 col-xs-offset-1">
+            <div class="input-group">
+                <div class="input-group-btn search-panel">
+                    <button type="button" class="btn btn-default dropdown-toggle" id="dropBut" data-toggle="dropdown">
+                        <span id="search_concept">Search by</span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#contains" onclick="choose('name')">Camera name</a></li>
+                        <li><a href="#its_equal" onclick="choose('loc')">Location</a></li>
+                    </ul>
                 </div>
+                <input type="hidden" name="search_param" value="all" id="search_param">
+                <input type="text" class="form-control" name="x" placeholder="Search ..." id="search_area">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" id="search_but" type="button" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+            </div>
         </div>
-        <div class="notFound" id="notFound"></div>
-        <div class=" cameras" id="cam-area">
-        </div>
     </div>
-    <div id="delEdit">
+    <div class="notFound" id="notFound"></div>
+    <div class=" cameras" id="cam-area">
     </div>
-    <div id="editArea">
-    </div>
-</body>
-</html>
+</div>
+<div id="delEdit">
+</div>
+<div id="editArea">
+</div>

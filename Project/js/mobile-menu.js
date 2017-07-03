@@ -1,7 +1,3 @@
-function resizeIframe(obj) {
-    obj.style.height = (screen.height - 150)+ 'px';
-}
-
 $(document).ready(function(){
     if (getCookie('a7@mail.ru')) {
         document.getElementById('log').innerHTML =
@@ -10,7 +6,7 @@ $(document).ready(function(){
         window.parent.document.getElementById('login').id = "logout";
     }
 
-    $('#nav-menu').click(function(){
+   /* $('#nav-menu').click(function(){
         $('#nav').toggle(500);
     });
     $('#home').click(function(){
@@ -37,7 +33,7 @@ $(document).ready(function(){
     });
     $('#mobile_login').click(function(){
         ChangeContent('login')
-    });
+    }); */
 });
 
 /*
