@@ -1,7 +1,7 @@
 var data = '{"camName":["Camera_1","Camera_2","Camera_3","Camera_4"], \
             "location":["Location_1","Location_2","Location_3","Location_4"], \
             "onOff":["Online","Online","Offline","Online"]}';
-var searchBy = ""
+var searchBy = "";
 $(document).ready(function(){
     var text = "";
     var i;
@@ -25,6 +25,7 @@ $(document).ready(function(){
             </div>\
         </div>';
     }
+
     document.getElementById("cam-area").innerHTML += text;
     text = '<div id="editSettings">Edit camera settings </div>\
             <hr>\

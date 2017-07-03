@@ -5,7 +5,7 @@ $(document).ready(function(){
         if (checkEmail(mail)){
             if (checkPassword(pass)) {
                 window.parent.document.getElementById('login').id = "logout";
-                window.parent.document.getElementById("content").src = "resurces/home.html";
+                window.parent.document.getElementById("content").src = "resources/home.html";
                 window.parent.document.getElementById('log').innerHTML =
                     "<i class='icon glyphicon glyphicon-user'></i>" + "&nbsp;&nbsp;Admin"
                     + "<i class='icon glyphicon glyphicon-arrow'></i>";

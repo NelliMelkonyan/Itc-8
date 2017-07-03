@@ -51,16 +51,16 @@ $(document).ready(function(){
 function ChangeContent(pageName) {
     switch (pageName) {
         case "home":
-            document.getElementById("content").src = "resurces/home.html";
+            document.getElementById("content").src = "resources/home.html";
             break;
         case "cameras":
-            document.getElementById("content").src = "resurces/cameras.html";
+            document.getElementById("content").src = "resources/cameras.html";
             break;
         case "detected":
-            document.getElementById("content").src = "resurces/detected_objects.html";
+            document.getElementById("content").src = "resources/detected_objects.html";
             break;
         case "login":
-            document.getElementById("content").src = "resurces/login.html";
+            document.getElementById("content").src = "resources/login.html";
             break;
     }
 }
