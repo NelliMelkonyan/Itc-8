@@ -4,31 +4,38 @@ app.config(function($routeProvider) {
     $routeProvider
         .when("/", {
             templateUrl : "resources/home.html",
-            controller : "myCtrl"
+            controller : "myCtrl",
+            data: {
+                pageTitle: "home"
+            }
         })
         .when("/objects", {
             templateUrl : "resources/detected_objects.html",
-            controller : "objects"
+            controller : "objects",
+            data: {
+                pageTitle: "objects"
+            }
         })
         .when("/cameras", {
             templateUrl : "resources/cameras.html",
-            controller : "cameras"
+            controller : "cameras",
+            data: {
+                pageTitle: "cameras"
+            }
         })
         .when("/login", {
             templateUrl : "resources/login.html",
-            controller : "login"
+            controller : "login",
+            data: {
+                pageTitle: "login"
+            }
         });
 });
 
-app.controller('myCtrl', function($scope) {
-    $scope.name = "jkshdfksd";
-
-});
 
 app.controller('head',function ($scope) {
     $scope.showMe = false;
     $scope.myFoo = function() {
         $scope.showMe = !$scope.showMe;
-        alert($scope.showMe);
     }
 });

@@ -47,3 +47,9 @@ app.directive("menu", function() {
     };
 });
 */
+app.controller('head',function ($scope) {
+    $scope.showMe = false;
+    $scope.myFoo = function() {
+        $scope.showMe = !$scope.showMe;
+    }
+});
