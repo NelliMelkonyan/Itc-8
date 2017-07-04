@@ -102,6 +102,11 @@ nav.nav-bar ul {
     cursor: pointer;
     text-decoration: none;
 }
+#nav li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 1px 1px 3px rgba(39, 254, 145, 0.28);
+}
 #nav li a:hover {
     text-decoration: none;
     margin-left: 3%;

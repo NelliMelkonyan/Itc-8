@@ -8,14 +8,13 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-animate.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
+
+
 
         <script src="js/app.js" defer></script>
         <script src="js/mobile-menu.js" defer></script>
         <script src="js/login.js" defer></script>
-        <script src="js/jsonParse.js" defer></script>
+
         <script src="js/detected-objects.js"></script>
 
 
@@ -27,10 +26,13 @@
         <link rel="stylesheet" href="css/detected_objects.css">
         <link rel="stylesheet" href="css/home.css">
         <link rel="stylesheet" href="css/login.css">
+
     </head>
     <body ng-app="my-app">
-       <div ng-include="'resources/header.html'"></div>
-       <div ng-view></div>
-       <div ng-include="'resources/footer.html'"></div>
+        <!--div ng-controller="myCtrl"-->
+            <div ng-include="'resources/header.html'"></div>
+            <div ng-view></div>
+            <div ng-include="'resources/footer.html'"></div>
+        <!--/div-->
     </body>
 </html>
