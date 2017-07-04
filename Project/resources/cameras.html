@@ -12,7 +12,7 @@
                     </ul>
                 </div>
                 <input type="hidden" name="search_param" value="all" id="search_param">
-                <input type="text" class="form-control" name="x" placeholder="Search ..." id="search_area">
+                <input type="text" class="form-control" name="x" placeholder="Search ..." id="search_area" ng-model="searchData">
                 <span class="input-group-btn">
                     <button class="btn btn-default" id="search_but" type="button" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
                 </span>
@@ -20,7 +20,23 @@
         </div>
     </div>
     <div class="notFound" id="notFound"></div>
-    <div class=" cameras" id="cam-area">
+    <div class=" cameras" id="cam-area" ng-repeat="cam in data | filter : searchData">
+        <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 camera-info" >
+            <div class="cam-foto">
+            </div>
+            <div class="info" >
+                <p class="info-field" style="margin: 2% 0  0 ;"><b> {{cam.camName}}</b></p>
+                <p class="info-field">{{cam.location}}</p>
+                <p class="info-field">{{cam.onOff}}</p>
+            </div>
+            <div class="icons">
+                <button class="btn glyphicon glyphicon-edit col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1 col-sm-offset-1"
+                        title="Edit" id = "edit" >
+                </button>
+                <button class="btn glyphicon glyphicon-remove-circle col-md-3 col-xs-3 col-sm-3 col-md-offset-1 col-xs-offset-1
+                 col-sm-offset-1" title="Delete" id = "del" > </button>
+            </div>
+        </div>
     </div>
 </div>
 <div id="delEdit">
