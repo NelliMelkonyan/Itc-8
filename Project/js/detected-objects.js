@@ -6,7 +6,7 @@ app.controller("objects", function($scope) {
                     [
                         {
                             "imageName": "images/ficsed.JPG",
-                            "imageDate": "01/15/2015"
+                            "imageDate": "01/14/2015"
                         },
                         {
                             "imageName": "images/ficsed.JPG",
