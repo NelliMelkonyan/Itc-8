@@ -1,3 +1,108 @@
+var checkEmail = false,
+    checkPsw = false;
+
+function validate() {
+    if (true == checkEmail && true == checkPsw) {
+        document.getElementById("btnLogId").disabled = false;
+    }
+}
+
+function setMyAtributtsForEmail() {
+    document.getElementById("alertEmail").style.display = "block";
+    document.getElementById("inputEmail").style.borderColor = "red";
+    document.getElementById("btnLogId").disabled = true;
+}
+function setMyAtributtsForPassword() {
+    document.getElementById("alertPsw").style.display = "block";
+    document.getElementById("inputPassword").style.borderColor = "red";
+    document.getElementById("btnLogId").disabled = true;
+}
+function validateEmail(email) {
+    var regularExpression = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if ("" == email) {
+        document.getElementById("alertEmail").innerHTML = "Please, fill out this field";
+        setMyAtributtsForEmail();
+        checkEmail = false;
+    } else if (!regularExpression.test(email)) {
+        document.getElementById("alertEmail").innerHTML = "Invalid mail format";
+        setMyAtributtsForEmail();
+        checkEmail = false;
+    } else {
+        document.getElementById("alertEmail").style.display = "none";
+        document.getElementById("inputEmail").style.borderColor = "green";
+        checkEmail = true;
+        validate();
+    }
+}
+
+function validatePassword(password) {
+    var regularExpression = /^(?=.*[0-9])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{6,20}$/;
+    if ("" == password) {
+        document.getElementById("alertPsw").innerHTML = "Please, fill out this field";
+        setMyAtributtsForPassword();
+        checkPsw = false;
+    } else if (!regularExpression.test(password)) {
+        document.getElementById("alertPsw").innerHTML = "Password should contain 6-20 symbols(required one lowercase letter and one number)";
+        setMyAtributtsForPassword();
+        checkPsw = false;
+    } else {
+        document.getElementById("alertPsw").style.display = "none";
+        document.getElementById("inputPassword").style.borderColor = "green";
+        checkPsw = true;
+        validate();
+    }
+}
+
+
+/*
+var app = angular.module('loginApp', []);
+
+app.controller('loginCtrl',function($scope) {
+        $scope.validateEmail = function() {
+            alert('emaill');
+            var regularExpression = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if ("" == $scope.email) {
+                //document.getElementById("alertEmail").style.display = "block";
+                //document.getElementById("alertEmail").innerHTML = "Please, fill out this field";
+                document.getElementById("inputEmail").style.borderColor = "red";
+                document.getElementById("btnLogId").disabled = true;
+                checkEmail = false;
+            } else if (!regularExpression.test($scope.email)) {
+                //document.getElementById("alertEmail").style.display = "block";
+                //document.getElementById("alertEmail").innerHTML = "Invalid mail format";
+                document.getElementById("inputEmail").style.borderColor = "red";
+                document.getElementById("btnLogId").disabled = true;
+                checkEmail = false;
+            } else {
+                //document.getElementById("alertEmail").style.display = "none";
+                document.getElementById("inputEmail").style.borderColor = "green";
+                checkEmail = true;
+                validate();
+            }
+        };
+        $scope.validatePassword = function() {
+            var regularExpression = /^(?=.*[0-9])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{6,20}$/;
+            if ("" == $scope.password) {
+                //document.getElementById("alertPsw").style.display = "block";
+                //document.getElementById("alertPsw").innerHTML = "Please, fill out this field";
+                document.getElementById("inputPassword").style.borderColor = "red";
+                document.getElementById("btnLogId").disabled = true;
+            } else if (!regularExpression.test($scope.password)) {
+                //document.getElementById("alertPsw").style.display = "block";
+                //document.getElementById("alertPsw").innerHTML = "Password should contain 6-20 symbols(required one lowercase letter and one number)";
+                document.getElementById("inputPassword").style.borderColor = "red";
+                document.getElementById("btnLogId").disabled = true;
+                checkPsw = false;
+            } else {
+                //document.getElementById("alertPsw").style.display = "none";
+                document.getElementById("inputPassword").style.borderColor = "green";
+                checkPsw = true;
+                validate();
+            }
+        };
+    });
+*/
+/*
 $(document).ready(function(){
     $('#btnLogId').click(function(){
         var mail = document.getElementById('email').value;
@@ -21,7 +126,7 @@ $(document).ready(function(){
 });
 
 function checkEmail(email) {
-    /*var email = document.getElementById('email');*/
+    //var email = document.getElementById('email');
     //var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     var filter = /^[a-zA-Z]+[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
     if (!filter.test(email)) {
@@ -35,7 +140,7 @@ function checkEmail(email) {
 function checkPassword(pass) {
     // at least one number, one lowercase and one uppercase letter
     // at least six characters that are letters, numbers or the underscore
-    /*var filter = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}$/;*/
+    //var filter = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}$/;
     var filter = /(?=.*[a-z])(?=.*[A-Z]).{6,15}/;
     if (!filter.test(pass)) {
         alert('Password must contain at least 6 characters, at least one number, one lowercase and one uppercase letter.All characters are allowed');
@@ -44,3 +149,4 @@ function checkPassword(pass) {
     }
     return true;
 }
+*/

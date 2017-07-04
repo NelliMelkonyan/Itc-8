@@ -1,32 +1,42 @@
-<div class="container global">
-    <div class="container">
-        <div class="row loginGlobal">
-            <div class="login col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2 col-center-block">
-
-                <form>
+<div class="container global" >
+    <div class="container myContainer">
+        <div class="row loginGlobal" ng-app="loginApp" ng-controller="loginCtrl">
+            <div id="logForm" class="login col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2 col-center-block">
+                <form name="form" ng-submit="vm.login()" role="form">
                     <h3 class="logText blink">LOGIN</h3>
                     <hr class="loginLine">
                     <p class="textUsernamePassword">E-mail</p>
+
                     <label class="label">
-                        <div class="input-group input">
+                        <div id="inputEmail" class="input-group input" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input id="email" title="Invalid email address" type="email" class="form-control" name="email" placeholder="Enter email" required="required" pattern="^[a-zA-Z]+[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                            <input onchange="validateEmail(this.value)" id="email" type="email" class="form-control" name="email" placeholder="Enter email" required="required">
+                            <!--input ng-change="validateEmail(this.value)" ng-model="email" id="email" type="email" class="form-control" name="email" placeholder="Enter email" required="required"-->
+                            <!--span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span-->
+                            <!--div role="alert">
+                                <span class="error" ng-show="myForm.input.$error.required">Required!</span>
+                                    <span class="error" ng-show="myForm.input.$error.email">Not valid email!</span>
+                            </div-->
                         </div>
+                        <div class="alert alert-danger" id="alertEmail" display="none"></div>
                     </label>
 
                     <p class="textUsernamePassword">Password</p>
                     <label class="label">
-                        <div class="input-group input">
+                        <div id="inputPassword" class="input-group input" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                            <input id="password" title="Password must contain at least 6 characters.All characters are allowed" type="password" class="form-control" name="password" placeholder="Enter password" required="required" pattern="(?=.*[a-z])(?=.*[A-Z]).{6,15}">
+                            <input onchange="validatePassword(this.value)" id="password" type="password" class="form-control" name="password" placeholder="Enter password" required="required" title="Password must contain at least 6 characters.All characters are allowed">
+                            <!--input ng-change="validatePassword(this.value)" ng-model="password" id="password" type="password" class="form-control" name="password" placeholder="Enter password" required="required" title="Password must contain at least 6 characters.All characters are allowed"-->
+                            <!--span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span-->
                         </div>
+                        <div class="alert alert-danger" id="alertPsw" display="none"></div>
                     </label>
+
                     <div class="remember-logBtn">
                         <label><input class="remember" type="checkbox" name="remember"> Remember me</label>
+                        <button  id="btnLogId" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-default btnLog"><strong>LogIn</strong></button>
                     </div>
                 </form>
-                <button  class="btn btn-default btnLog" id="btnLogId"><strong>LogIn</strong></button>
-
             </div>
         </div>
     </div>

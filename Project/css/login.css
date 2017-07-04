@@ -8,7 +8,9 @@
     background-size: cover;
     overflow:hidden;
 }
-
+.myContainer {
+    background-image: url("../images/logImg1.jpg");
+}
 .login {
     background-color: rgba(230, 231, 255, 0.66);
     opacity: 1;
@@ -72,4 +74,11 @@
     0% { color: #000000; }
     50% { color: #ffffff; }
     100% { color: #060000; }
+}
+.alert {
+    width: auto;
+    height:auto;
+    background-color: rgb(211, 212, 236);
+    display: none;
+    font-size: 14px;
 }
