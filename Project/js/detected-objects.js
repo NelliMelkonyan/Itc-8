@@ -30,4 +30,13 @@ app.controller("objects", function($scope) {
         ]
     };
 
+    $scope.searchItems = ["by camera", "by date"];
+
+    $scope.objectFilter = function (input) {
+        if($scope.selectedItem == "by camera" && input.cameraName) return true;
+        else if($scope.selectedItem == "by date" && input.image) return true;
+        else if (!$scope.selectedItem) return true;
+        return true;
+    }
+
 });

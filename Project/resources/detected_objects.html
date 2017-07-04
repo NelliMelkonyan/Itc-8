@@ -1,19 +1,14 @@
 
 <div class="container">
     <div class="row" >
-        <div class="col-sm-3 col-xs-12 search-col">
+        <div class="col-md-offset-2 col-sm-offset-2 col-xs-offset-2 col-sm-8 col-md-8 col-xs-8 search-col">
             <div class="dropdown">
+
                 <input ng-model="searchByDate" class="search-input" type="text" placeholder="Search by date" id="date" onchange="searchByInterval()">
                 <button class="search-button dropdown-toggle" type="button" data-toggle="dropdown" onclick="searchByInterval()">
                     <span class="glyphicon glyphicon-search"></span>
                 </button>
-                   <!--<ul class="list dropdown-menu">
-                        <li>
-                            <p>Select date : </p>
-                            <input name="" type="" class="time" >
-                            <input name="" type="" class="time" id="toDate">
-                        </li>
-                    </ul>-->
+
             </div>
 
             <div class="dropdown">
@@ -26,15 +21,16 @@
                     </ul>-->
             </div>
         </div>
+    </div>
 
-        <div  class="detected-list col-md-9 col-sm-9 col-xs-12" ng-repeat="camera in ocw.cameras | filter : searchByCamera">
-            <div  class="detected-object row" ng-repeat="image in camera.images | filter: searchByDate">
-                <img class="col-md-3 col-xs-3 col-sm-3" src="{{image.imageName}}">
-                <div class="col-xs-9 col-sm-9 col-md-9 ficsed-data">
+    <div class="row detected-container" ng-repeat="camera in ocw.cameras | filter : searchByCamera">
+            <div  class="detected-object col-md-offset-2 col-sm-offset-2 col-xs-offset-2 col-sm-8 col-md-8 col-xs-8" ng-repeat="image in camera.images | filter: searchByDate">
+                <img class="detected-image" src="{{image.imageName}}">
+                <div class="detected-data">
                     <p><b>{{camera.cameraName}}</b></p>
                     <p>{{image.imageDate}}</b></p>
                 </div>
             </div>
-        </div>
     </div>
+
 </div>
