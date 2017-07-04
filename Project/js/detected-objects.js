@@ -1,15 +1,15 @@
-app.controller("detectedObjectsController", function($scope) {
+app.controller("objects", function($scope) {
     $scope.ocw = {
         "cameras": [
             { "cameraName": "Camera 1",
                 "images":
                     [
                         {
-                            "imageName": "../images/ficsed.JPG",
+                            "imageName": "images/ficsed.JPG",
                             "imageDate": "01/15/2015"
                         },
                         {
-                            "imageName": "../images/ficsed.JPG",
+                            "imageName": "images/ficsed.JPG",
                             "imageDate": "01/15/2016"
                         }
                     ]
@@ -18,11 +18,11 @@ app.controller("detectedObjectsController", function($scope) {
                 "images":
                     [
                         {
-                            "imageName": "../images/ficsed.JPG",
+                            "imageName": "images/ficsed.JPG",
                             "imageDate": "01/15/2016"
                         },
                         {
-                            "imageName": "../images/ficsed.JPG",
+                            "imageName": "images/ficsed.JPG",
                             "imageDate": "01/15/2018"
                         }
                     ]

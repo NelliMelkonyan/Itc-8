@@ -25,12 +25,8 @@ app.controller('myCtrl', function($scope) {
 
 });
 
-app.controller('objects', function($scope) {
-    $scope.name = "hello";
-});
-
 app.controller('cameras', function($scope) {
-    alert("cameras");
+    
 });
 
 app.controller('login', function($scope) {
