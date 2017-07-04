@@ -25,32 +25,6 @@ app.controller('myCtrl', function($scope) {
 
 });
 
-app.controller('cameras', function($scope) {
-    $scope.data = [
-        {
-            camName: "Camera_1",
-            location: "Location_1",
-            onOff: "Online"
-        },
-        {
-            camName: "Camera_2",
-            location: "Location_2",
-            onOff: "Online"
-        },
-        {
-            camName: "Camera_3",
-            location: "Location_3",
-            onOff: "Offline"
-        },
-        {
-            camName: "Camera_4",
-            location: "Location_4",
-            onOff: "Online"
-        },
-
-    ]
-});
-
 app.controller('head',function ($scope) {
     $scope.showMe = false;
     $scope.myFoo = function() {

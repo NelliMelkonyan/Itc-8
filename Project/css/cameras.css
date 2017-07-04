@@ -9,7 +9,7 @@
     -o-background-size: cover;
     background-size: cover;
     overflow:hidden;
-    min-height: 100vh;
+    min-height:100vh;
 }
 
 .notFound {
@@ -52,7 +52,7 @@
 
 .info-field {
     margin-bottom: 3%;
-    margin-top:3%; 
+    margin-top:3%;
 }
 
 .icons {
@@ -61,7 +61,6 @@
     margin-top: 2%;
 }
 
-/*TODO background-color: white; can be defined as variable by using scss*/
 
 .icons>button {
     background-color: rgba(230, 231, 255, 0.66);
@@ -81,11 +80,13 @@
     margin-top: 20px;
 }
 
-#search_but, #dropBut {
+#search_but {
     background-color: rgba(230, 231, 255, 0.8);
+    border-radius: 0 4px 4px 0;
+    height: 35px;
 }
 
-#search_but, #dropBut:active {
+#search_but:active {
     outline: none;
 }
 
@@ -93,10 +94,21 @@
     outline: none;
 }
 
-#search_area {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: black;
+
+.drop {
+    height: 35px;
+    background-color: rgb(198, 197, 213);
+    border-radius:4px 0 0 4px;
+    font-size: 1.2em;
 }
+
+.input_area {
+    height:35px;
+    outline: none;
+    border:none;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
 
 #delEdit {
     width: 100%;
@@ -159,7 +171,7 @@
 
 .nameLoc {
     font-size: 1.2em;
-    float: left; 
+    float: left;
     margin:0 0 10px 10%;
     display: block;
 

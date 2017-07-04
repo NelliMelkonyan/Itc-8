@@ -1,22 +1,13 @@
 <div class="container cont" id = "cont">
     <div class="row " id="search">
-        <div class="col-sm-6  col-sm-offset-3 col-xs-10 col-xs-offset-1">
-            <div class="input-group">
-                <div class="input-group-btn search-panel">
-                    <button type="button" class="btn btn-default dropdown-toggle" id="dropBut" data-toggle="dropdown">
-                        <span id="search_concept">Search by</span> <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#contains" onclick="choose('name')">Camera name</a></li>
-                        <li><a href="#its_equal" onclick="choose('loc')">Location</a></li>
-                    </ul>
-                </div>
-                <input type="hidden" name="search_param" value="all" id="search_param">
-                <input type="text" class="form-control" name="x" placeholder="Search ..." id="search_area" ng-model="searchData">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" id="search_but" type="button" onclick="search()"><span class="glyphicon glyphicon-search"></span></button>
-                </span>
-            </div>
+        <div class="col-sm-8  col-sm-offset-2 col-xs-10 col-xs-offset-1">
+            <select ng-model="selModel" class="col-sm-2 col-xs-3 drop">
+                <option >{{selectData[0]}}</option>
+                <option >{{selectData[1]}}</option>
+                <option >{{selectData[2]}}</option>
+            </select>
+            <input class="input_area col-sm-9 col-xs-8" placeholder="Search...">
+            <button class="btn btn-default col-sm-1 col-xs-1" id="search_but" type="button" ng-click="search()"><span class="glyphicon glyphicon-search"></span></button>
         </div>
     </div>
     <div class="notFound" id="notFound"></div>
