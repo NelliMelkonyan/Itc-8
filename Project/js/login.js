@@ -42,7 +42,7 @@ function validatePassword(password) {
         setMyAtributtsForPassword();
         checkPsw = false;
     } else if (!regularExpression.test(password)) {
-        document.getElementById("alertPsw").innerHTML = "Password should contain 6-20 symbols(required one lowercase letter and one number)";
+        document.getElementById("alertPsw").innerHTML = "Password should contain 6-20 symbols <br> (required one lowercase letter and one number)";
         setMyAtributtsForPassword();
         checkPsw = false;
     } else {

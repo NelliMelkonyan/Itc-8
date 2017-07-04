@@ -10,12 +10,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
 
 
-
-        <script src="js/app.js" defer></script>
         <script src="js/mobile-menu.js" defer></script>
         <script src="js/login.js" defer></script>
-
         <script src="js/detected-objects.js"></script>
+        <script src="js/app.js" defer></script>
+
 
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -29,10 +28,10 @@
 
     </head>
     <body ng-app="my-app">
-        <!--div ng-controller="myCtrl"-->
+
             <div ng-include="'resources/header.html'"></div>
             <div ng-view></div>
             <div ng-include="'resources/footer.html'"></div>
-        <!--/div-->
+
     </body>
 </html>

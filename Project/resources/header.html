@@ -2,9 +2,9 @@
     <div class="topMenu header">
         <nav class="nav-bar">
             <div class="nav-container">
-                <a id="nav-menu" class="nav-menu hidden-sm hidden-md hidden-lg" ng-click="myFunc()">
-                    <i class="icon glyphicon glyphicon-list"></i>&nbsp;&nbsp;Menu
-                </a>
+                <i id="nav-menu" class="nav-menu hidden-sm hidden-md hidden-lg" ng-click="console.log('aaaaaaaa')">
+                    <i class="icon glyphicon glyphicon-list"></i>&nbsp;&nbsp;Menu {{name}}
+                </i>
                 <ul class="nav-list hidden-xs">
                     <li id="home" class="active"> <a href="#/!"><i class="icon glyphicon glyphicon-home"></i>&nbsp;&nbsp;HOME</a></li>
                     <li id="detected"> <a href="#!objects"><i class="icon glyphicon glyphicon-user"></i>&nbsp;&nbsp;DETECTED OBJECTS</a></li>
@@ -22,17 +22,3 @@
         </ul>
     </div>
 </header>
-<script>
-
-    var app = angular.module('my-app', []);
-    console.log(app);
-    app.controller('myCtrl', function($scope) {
-
-        $scope.showMe = false;
-        $scope.myFunc = function() {
-            $scope.showMe = !$scope.showMe;
-        }
-    });
-
-</script>
-
