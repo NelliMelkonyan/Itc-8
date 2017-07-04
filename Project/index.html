@@ -12,7 +12,6 @@
 
         <script src="js/mobile-menu.js" defer></script>
         <script src="js/login.js" defer></script>
-        <script src="js/detected-objects.js"></script>
         <script src="js/app.js" defer></script>
 
 
@@ -29,7 +28,7 @@
     </head>
     <body ng-app="my-app">
 
-            <div ng-include="'resources/header.html'"></div>
+            <div ng-include="'resources/header.html'" ng-controller="head"></div>
             <div ng-view></div>
             <div ng-include="'resources/footer.html'"></div>
 

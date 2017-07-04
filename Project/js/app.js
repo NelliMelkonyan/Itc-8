@@ -30,9 +30,16 @@ app.controller('objects', function($scope) {
 });
 
 app.controller('cameras', function($scope) {
-    alert("cameras");
+    //alert("cameras");
 });
 
 app.controller('login', function($scope) {
-    alert("login");
+    //alert("login");
+});
+app.controller('head',function ($scope) {
+    $scope.showMe = false;
+    $scope.myFoo = function() {
+        $scope.showMe = !$scope.showMe;
+        alert($scope.showMe);
+    }
 });

@@ -17,8 +17,8 @@ body{
 .topMenu {
     padding: 20px 0 20px 0;
     box-shadow: 2px 2px 2px 2px #DFE3EE;
-/*    background: rgba(0, 0, 0, 0) linear-gradient(to right, rgba(242, 148, 146, 1), rgba(17, 67, 87, 1)) repeat;*/
-    background-color: rgb(94, 133, 132);
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, rgba(0, 0, 0, 0.15), rgb(0, 0, 0)) repeat;
+    /*background-color: rgb(0, 0, 0);*/
     background-clip: border-box;
     background-origin: padding-box;
     background-position-x: 0;
