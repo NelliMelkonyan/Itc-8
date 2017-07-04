@@ -1,15 +1,16 @@
 <div class="container cont" id = "cont">
     <div class="row " id="search">
         <div class="col-sm-8  col-sm-offset-2 col-xs-10 col-xs-offset-1">
-            <select ng-model="selModel" class="col-sm-2 col-xs-3 drop">
-                <option >{{selectData[0]}}</option>
-                <option >{{selectData[1]}}</option>
-                <option >{{selectData[2]}}</option>
+            <select ng-model="searchBy" class="col-sm-2 col-xs-3 drop">
+                <option value="$">{{selectData[0]}}</option>
+                <option value="camName">{{selectData[1]}}</option>
+                <option value="location">{{selectData[2]}}</option>
             </select>
-            <input class="input_area col-sm-9 col-xs-8" placeholder="Search...">
+            <input class="input_area col-sm-9 col-xs-8" placeholder="Search..." ng-model="searchData[searchBy]">
             <button class="btn btn-default col-sm-1 col-xs-1" id="search_but" type="button" ng-click="search()"><span class="glyphicon glyphicon-search"></span></button>
         </div>
     </div>
+
     <div class="notFound" id="notFound"></div>
     <div class=" cameras" id="cam-area" ng-repeat="cam in data | filter : searchData">
         <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 camera-info" >

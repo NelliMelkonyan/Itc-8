@@ -86,14 +86,13 @@
     height: 35px;
 }
 
-#search_but:active {
+#search_but, .drop:active {
     outline: none;
 }
 
-#search_but:focus {
+#search_but, .drop:focus {
     outline: none;
 }
-
 
 .drop {
     height: 35px;
