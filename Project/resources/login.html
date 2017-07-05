@@ -34,7 +34,7 @@
 
                     <div class="remember-logBtn">
                         <label><input class="remember" type="checkbox" name="remember"> Remember me</label>
-                        <button  id="btnLogId" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-default btnLog"><strong>LogIn</strong></button>
+                        <button  ng-click="loginClicked()" id="btnLogId" ng-disabled="form.$invalid" class="btn btn-default btnLog"><strong>LogIn</strong></button>
                     </div>
                 </form>
             </div>

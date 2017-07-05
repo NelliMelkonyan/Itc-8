@@ -1,3 +1,12 @@
+var x= "<i class='icon glyphicon glyphicon-user'></i>" + "&nbsp;&nbsp;Log Out" + "<i class='icon glyphicon glyphicon-arrow'></i>";
+$(document).ready(function(){
+    $('#login').click(function() {
+        if (window.parent.document.getElementById('log').innerHTML == x) {
+            alert('logout');
+        }
+    });
+});
+
 var checkEmail = false,
     checkPsw = false;
 
@@ -57,7 +66,32 @@ app.controller('login', function($scope) {
             validate();
         }
     };
+
+    $scope.loginClicked = function() {
+        alert(1);
+        //window.location = "index.html";
+        window.parent.document.getElementById('log').innerHTML =
+            "<i class='icon glyphicon glyphicon-user'></i>" + "&nbsp;&nbsp;Log Out"
+            + "<i class='icon glyphicon glyphicon-arrow'></i>";
+    };
 });
+
+/*
+app.controller('login', ['$scope', function($scope) {
+    alert(1);
+    $scope.loginClicked = function() {
+        alert(2);
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when("login", {
+                    templateUrl: "resources/home.html",
+                    controller: "myCtrl"
+                })
+        });
+    };
+}]);
+*/
+
 
 
 /*
